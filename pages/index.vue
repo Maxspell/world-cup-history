@@ -32,5 +32,6 @@
         </NuxtLink>
       </div>
     </section>
+    <LatestMatches />
   </div>
 </template>
