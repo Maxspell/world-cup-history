@@ -32,6 +32,8 @@
         </NuxtLink>
       </div>
     </section>
+    <TournamentTable />
     <LatestMatches />
+    <TopForwards />
   </div>
 </template>
