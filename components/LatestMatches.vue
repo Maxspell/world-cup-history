@@ -24,14 +24,15 @@ onMounted(async () => {
 
 <template>
   <section class="container mx-auto px-4 py-10">
-    <div class="overflow-x-auto rounded border border-gray-300 shadow-sm dark:border-gray-600 dark:bg-gray-900">
-      <table class="min-w-full divide-y-2 divide-gray-200 dark:divide-gray-700">
-        <thead class="ltr:text-left rtl:text-right">
+    <h2 class="text-3xl font-bold text-white mb-8">🏆 Latest Matches</h2>
+    <div class="overflow-x-auto rounded-2xl border border-gray-300 shadow-sm dark:border-white/10 bg-white/5">
+      <table class="min-w-full divide-y-2 divide-gray-200 dark:divide-gray-700 text-center">
+        <thead>
           <tr class="*:font-medium *:text-gray-900 dark:*:text-white">
-            <th class="px-3 py-2 whitespace-nowrap">Match</th>
-            <th class="px-3 py-2 whitespace-nowrap">Score</th>
-            <th class="px-3 py-2 whitespace-nowrap">Stadium</th>
-            <th class="px-3 py-2 whitespace-nowrap">Date</th>
+            <th class="px-3 py-3 whitespace-nowrap">Match</th>
+            <th class="px-3 py-3 whitespace-nowrap">Score</th>
+            <th class="px-3 py-3 whitespace-nowrap">Stadium</th>
+            <th class="px-3 py-3 whitespace-nowrap">Date</th>
           </tr>
         </thead>
         <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
@@ -40,8 +41,8 @@ onMounted(async () => {
             :key="match.id"
             class="*:text-gray-900 *:first:font-medium dark:*:text-white"
           >
-            <td class="px-3 py-2 whitespace-nowrap">
-              <div class="flex items-center gap-3">
+            <td class="px-6 py-3 whitespace-nowrap">
+              <div class="flex items-center justify-center gap-3">
                 <img
                   v-if="match.team_1?.logo?.formats?.thumbnail?.url"
                   :src="`http://localhost:1337${match.team_1.logo.formats.thumbnail.url}`"
@@ -59,13 +60,13 @@ onMounted(async () => {
                 <span>{{ match.team_2.name }}</span>
               </div>
             </td>
-            <td class="px-3 py-2 whitespace-nowrap text-center">
+            <td class="px-6 py-3 whitespace-nowrap text-center">
               {{ match.score || 'TBD' }}
             </td>
-            <td class="px-3 py-2 whitespace-nowrap">
+            <td class="px-6 py-3 whitespace-nowrap">
               {{ match.stadium?.name || '-' }}
             </td>
-            <td class="px-3 py-2 whitespace-nowrap">
+            <td class="px-6 py-3 whitespace-nowrap">
               {{ new Date(match.date).toLocaleDateString() }}
             </td>
           </tr>

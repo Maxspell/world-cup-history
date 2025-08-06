@@ -6,7 +6,7 @@
       <div
         v-for="player in topForwards"
         :key="player.id"
-        class="bg-white dark:bg-gray-900 backdrop-blur-md rounded-2xl p-6 flex flex-col items-center text-center shadow-xl transition hover:scale-105"
+        class="bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-6 flex flex-col items-center text-center shadow-xl transition hover:scale-105"
       >
         <img
           :src="`http://localhost:1337${player.photo}`"

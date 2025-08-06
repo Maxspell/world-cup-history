@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-white text-gray-900">
+  <main class="min-h-screen bg-white dark:bg-gray-900">
     <section class="container mx-auto px-4 py-10">
       <h1 class="text-4xl font-bold mb-4 text-center">🏆 Кубки світу з футболу</h1>
       <p class="text-center text-lg text-gray-600 mb-10">
@@ -35,5 +35,19 @@
     <TournamentTable />
     <LatestMatches />
     <TopForwards />
+    
+    <section class="bg-white dark:bg-gray-900 p-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+  <div class="col-span-2 backdrop-blur-lg bg-white/5 rounded-2xl p-8 border border-white/10">
+    <h2 class="text-3xl font-bold text-white">Заголовок</h2>
+    <p class="text-gray-300 mt-3">Текст в полупрозрачном блоке</p>
   </div>
+  <div class="backdrop-blur-md bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/10">
+    <h3 class="text-xl font-semibold text-white">Элемент</h3>
+  </div>
+  <div class="backdrop-blur-md bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/10">
+    <h3 class="text-xl font-semibold text-white">Элемент</h3>
+  </div>
+</section>
+
+</main>
 </template>
